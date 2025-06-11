@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Tab } from '@headlessui/react'
 import {
-  AcademicCapIcon,
   CalendarIcon,
   QuestionMarkCircleIcon,
   BookOpenIcon,

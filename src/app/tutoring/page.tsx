@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Calendar } from '@/components/Calendar'
 import { Tab } from '@headlessui/react'
-import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline'
 
 const instructors = [
   { id: 1, name: 'Brandon', specialties: ['Algebra', 'Calculus'] },
@@ -43,7 +42,6 @@ export default function BookingPage() {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
   const [selectedInstructor, setSelectedInstructor] = useState<number | null>(null)
-  const [sessionType, setSessionType] = useState<'Online' | 'In-Person'>('Online')
 
   return (
     <div className="bg-white">
@@ -92,40 +90,6 @@ export default function BookingPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-gray-900">Session Details</h2>
             <form className="mt-6 space-y-6">
-              <div>
-                <label htmlFor="session-type" className="block text-sm font-medium text-gray-700">
-                  Session Type
-                </label>
-                <Tab.Group>
-                  <Tab.List className="mt-2 flex space-x-4">
-                    <Tab
-                      className={({ selected }) =>
-                        `rounded-md px-4 py-2 text-sm font-medium ${
-                          selected
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                        }`
-                      }
-                      onClick={() => setSessionType('Online')}
-                    >
-                      Online
-                    </Tab>
-                    <Tab
-                      className={({ selected }) =>
-                        `rounded-md px-4 py-2 text-sm font-medium ${
-                          selected
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                        }`
-                      }
-                      onClick={() => setSessionType('In-Person')}
-                    >
-                      In-Person
-                    </Tab>
-                  </Tab.List>
-                </Tab.Group>
-              </div>
-
               <div>
                 <label htmlFor="instructor" className="block text-sm font-medium text-gray-700">
                   Instructor

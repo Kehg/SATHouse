@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Tab } from '@headlessui/react'
 import { MagnifyingGlassIcon, PaperClipIcon } from '@heroicons/react/24/outline'
 
 const topics = [

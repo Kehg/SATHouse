@@ -1,7 +1,6 @@
 'use client'
 
-import { Fragment, useState } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import { useState } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay } from 'date-fns'
 
