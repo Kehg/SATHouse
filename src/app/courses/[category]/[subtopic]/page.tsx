@@ -3,7 +3,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const approaches = ['Brandon\'s Advanced Desmos', 'Traditional Math Approach', 'Custom Logic Methods']
 
-export default function CoursePage({
+export default async function CoursePage({
   params,
 }: {
   params: { category: string; subtopic: string }
