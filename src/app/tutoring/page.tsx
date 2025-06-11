@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { Calendar } from '@/components/Calendar'
-import { Tab } from '@headlessui/react'
 
 const instructors = [
   { id: 1, name: 'Brandon', specialties: ['Algebra', 'Calculus'] },
