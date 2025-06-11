@@ -1,13 +1,17 @@
 import Link from 'next/link'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
+import { FC } from 'react'
 
 const approaches = ['Brandon\'s Advanced Desmos', 'Traditional Math Approach', 'Custom Logic Methods']
 
-export default async function CoursePage({
-  params,
-}: {
-  params: { category: string; subtopic: string }
-}) {
+interface PageProps {
+  params: {
+    category: string;
+    subtopic: string;
+  };
+}
+
+const Page: FC<PageProps> = async ({ params }) => {
   const breadcrumbs = [
     { name: 'Home', href: '/' },
     { name: 'Courses', href: '/courses' },
@@ -72,4 +76,6 @@ export default async function CoursePage({
       </div>
     </div>
   )
-} 
+}
+
+export default Page; 
